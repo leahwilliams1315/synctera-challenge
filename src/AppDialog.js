@@ -6,13 +6,14 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { forwardRef, useEffect, useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Zoom from '@material-ui/core/Zoom';
+import { amountFormatter, dateFormatter } from './utils';
 
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Zoom ref={ref} {...props} />;
 });
 
-const AppDialog = (props) => {
+export const AppDialog = (props) => {
 
   const [open, setOpen] = useState(props.isOpen);
 
@@ -38,12 +39,12 @@ const AppDialog = (props) => {
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-slide-description">
-          <div>
-            <p>Transaction Date: {props['Transaction-Date']}</p>
+          {props.id ? <div>
+            <p>Transaction Date: {dateFormatter(props['Transaction-Date'])}</p>
             <p>Description: {props.Description}</p>
             <p>Category: {props.Category}</p>
-            <p>Amount: {props.amount}</p>
-          </div>
+            <p>Amount: {amountFormatter(props.amount)}</p>
+          </div> : ''}
         </DialogContentText>
       </DialogContent>
       <DialogActions>
@@ -55,5 +56,4 @@ const AppDialog = (props) => {
   )
 };
 
-export default AppDialog;
 
