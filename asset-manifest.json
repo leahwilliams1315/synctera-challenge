@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/synctera-challenge/static/css/main.f302ae66.chunk.css",
+    "main.js": "/synctera-challenge/static/js/main.4adfdab8.chunk.js",
+    "main.js.map": "/synctera-challenge/static/js/main.4adfdab8.chunk.js.map",
+    "runtime-main.js": "/synctera-challenge/static/js/runtime-main.58f4c08d.js",
+    "runtime-main.js.map": "/synctera-challenge/static/js/runtime-main.58f4c08d.js.map",
+    "static/js/2.142a5f7d.chunk.js": "/synctera-challenge/static/js/2.142a5f7d.chunk.js",
+    "static/js/2.142a5f7d.chunk.js.map": "/synctera-challenge/static/js/2.142a5f7d.chunk.js.map",
+    "static/js/3.06394800.chunk.js": "/synctera-challenge/static/js/3.06394800.chunk.js",
+    "static/js/3.06394800.chunk.js.map": "/synctera-challenge/static/js/3.06394800.chunk.js.map",
+    "index.html": "/synctera-challenge/index.html",
+    "static/css/main.f302ae66.chunk.css.map": "/synctera-challenge/static/css/main.f302ae66.chunk.css.map",
+    "static/js/2.142a5f7d.chunk.js.LICENSE.txt": "/synctera-challenge/static/js/2.142a5f7d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.58f4c08d.js",
+    "static/js/2.142a5f7d.chunk.js",
+    "static/css/main.f302ae66.chunk.css",
+    "static/js/main.4adfdab8.chunk.js"
+  ]
+}
