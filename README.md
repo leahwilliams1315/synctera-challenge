@@ -1,7 +1,7 @@
 # Synctera Front-End Challenge
 
 
-####https://leahwilliams1315.github.io/synctera-challenge/
+https://leahwilliams1315.github.io/synctera-challenge/
 
 ### What would be some of the performance considerations for this application with hundreds of users, thousands? millions?
 
