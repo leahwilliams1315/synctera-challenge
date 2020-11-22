@@ -1,18 +1,36 @@
-.app {
+.app-content {
   display: flex;
   align-items: center;
   flex-direction: column;
   padding-top: 30px;
 }
 .container {
-  max-height: 85vh;
+  max-height: 90vh;
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
+.content-row {
+  display: flex;
+  justify-content: space-between;
+}
+.content-label {
+  font-weight: bold;
+  margin-right: 15px;
 }
 
+
 @media only screen and (max-width: 600px) {
-  .app {
+  .app-content {
     padding: 0;
   }
   .paper {
-    width: 95vw;
+    width: 100vw;
+  }
+
+  .container {
+    /*56px is the height of the header*/
+    max-height: calc(100vh - 56px);
   }
 }

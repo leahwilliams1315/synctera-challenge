@@ -6,8 +6,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { forwardRef, useEffect, useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Zoom from '@material-ui/core/Zoom';
-import { amountFormatter, dateFormatter } from './utils';
-
+import { amountFormatter, dateFormatter } from '../utils';
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Zoom ref={ref} {...props} />;
@@ -31,19 +30,29 @@ export const AppDialog = (props) => {
       TransitionComponent={Transition}
       keepMounted
       onClose={handleClose}
-      aria-labelledby="alert-dialog-slide-title"
-      aria-describedby="alert-dialog-slide-description"
     >
-      <DialogTitle id="alert-dialog-slide-title">
+      <DialogTitle>
         Transaction Details
       </DialogTitle>
       <DialogContent>
-        <DialogContentText id="alert-dialog-slide-description">
-          {props.id ? <div>
-            <p>Transaction Date: {dateFormatter(props['Transaction-Date'])}</p>
-            <p>Description: {props.Description}</p>
-            <p>Category: {props.Category}</p>
-            <p>Amount: {amountFormatter(props.amount)}</p>
+        <DialogContentText>
+          {props.id ? <div className="content-container">
+           <div className="content-row">
+             <div className="content-label">Transaction Date:</div>
+             <div>{dateFormatter(props['Transaction-Date'])}</div>
+           </div>
+            <div className="content-row">
+              <div className="content-label">Description:</div>
+              <div>{props.Description}</div>
+            </div>
+            <div className="content-row">
+              <div className="content-label">Category:</div>
+              <div>{props.Category}</div>
+            </div>
+            <div className="content-row">
+              <div className="content-label">Amount:</div>
+              <div>{amountFormatter(props.amount)}</div>
+            </div>
           </div> : ''}
         </DialogContentText>
       </DialogContent>
